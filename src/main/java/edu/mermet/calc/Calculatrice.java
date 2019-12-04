@@ -26,6 +26,7 @@ public class Calculatrice {
   }
 
 
+
   public void entrer(String texteSaisi) {
     if( texteSaisi.matches( "^[0-9][0-9.]*$" ) ){
       pile.add( Double.parseDouble( texteSaisi ) );
@@ -33,12 +34,20 @@ public class Calculatrice {
       switch( texteSaisi ) {
         case "\\":
           inverse();
+
          case "log":
-          log();
-          case "ln": ln();
+          log(double x);
+          case "ln": ln(double x);
 
       }
     }
+      
+   }
+  
+
+  public String pile(){
+    return pile.size() + ": " + pile.peek();
+
   }
 
   public String pile(){
