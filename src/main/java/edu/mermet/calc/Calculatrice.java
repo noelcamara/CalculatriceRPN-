@@ -7,7 +7,27 @@ import java.util.Stack;
  *
  */
  
- public void addition()
+ 
+public class Calculatrice {
+
+  private Stack<Double> pile;
+
+  public Calculatrice(){
+    pile = new Stack<>();
+  }
+
+  public void inverse(){
+    pile.add( 1/pile.pop() );
+  }
+
+  public void log(double x){
+    pile.add( Math.log(x)/Math.log(10) );
+  }
+   public void ln(double x){
+    pile.add( Math.log(x) );
+  }
+  
+  public void addition()
 {
 	int res = 0;
 
@@ -66,24 +86,6 @@ public void puissance()
 	
 	pile.add(res);
 }
-public class Calculatrice {
-
-  private Stack<Double> pile;
-
-  public Calculatrice(){
-    pile = new Stack<>();
-  }
-
-  public void inverse(){
-    pile.add( 1/pile.pop() );
-  }
-
-  public void log(double x){
-    pile.add( Math.log(x)/Math.log(10) );
-  }
-   public void ln(double x){
-    pile.add( Math.log(x) );
-  }
 
 
 
