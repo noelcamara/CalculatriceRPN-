@@ -48,15 +48,5 @@ public class Calculatrice{
 	  pile.clear();
   }
   
-  public static void main(String[] args) {
-	  Calculatrice c = new Calculatrice();
-	  c.pile.add(2.0);
-	  c.pile.add(3.0);
-	  c.produit();
-	  c.oppposit();
-	  for(Double i : c.pile) {
-	      System.out.println(i);
-	  }
-  }
 }
 
